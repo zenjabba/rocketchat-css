@@ -1,0 +1,72 @@
+/* hide new sidebar footer in v6.0 taking up way too much space */
+.rcx-sidebar-footer {
+    display: none !important;
+}
+
+.rcx-css-6ove2c {
+    display: none !important;
+}
+
+/* input box highlighting border removal for v6.0, it simply doesn't look good */
+.rcx-input-box__wrapper:focus-within,
+.rcx-css-o7c782 {
+    box-shadow: none !important;
+    border-color: RocketChat/Rocket.Chat#666 !important;
+}
+/* v6.0 code blocks themed in dark */
+.hljs-keyword, .hljs-selector-tag, .hljs-subst {
+    color: #CCC !important;
+}
+.rc-old .code-colors {
+    color: var(--rcx-color-font-default,var(--rcx-color-neutral-800,#2f343d));
+    background-color: var(--rcx-color-surface-neutral,#f8f8f8);
+}
+.hljs-doctag, .hljs-string {
+    color: #d0627e !important;
+}
+.hljs-attribute { 
+    color: #7979fd !important; 
+    font-weight:800 !important;
+}
+/* v6.0 unread messages notification bar themed in dark */
+.unread-bar.color-primary-action-color.background-component-color {
+    background-color: var(--rcx-color-surface-neutral,var(--component-color));
+}
+
+/* v6.0 messages purge warning displayed at start of channel windows (if message purge configured) */
+.messages-box .start .start__purge-warning {
+    background: linear-gradient(180deg,#31363f 0,hsla(0,0%,100%,0)) !important;
+}
+.error-color {
+    color: #d0627e !important;
+}
+/* beautified @mention nametags for dark and light mode */
+@keyframes blinker-mention-me {
+  0% {
+    opacity: 100;
+  }
+  40% {
+    opacity: 100;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 100;
+  }
+}
+.mention-link {
+    color: #fff !important;
+    background-color: #f7a600 !important;
+    text-shadow: -1px -1px 0 RocketChat/Rocket.Chat#666, 1px -1px 0 RocketChat/Rocket.Chat#666, -1px 1px 0 RocketChat/Rocket.Chat#666, 1px 1px 0 RocketChat/Rocket.Chat#666;
+}
+.mention-link--me, .message .mention-link--me {
+    color: #fff !important;
+    background-color: #ff4200fa !important;
+    animation: blinker-mention-me 2s linear infinite;
+}
+.mention-link--group, .message .mention-link--group {
+    color: #fff !important;
+    background-color: #ff4200fa !important;
+    animation: blinker-mention-me 2s linear infinite;
+}
